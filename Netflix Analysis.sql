@@ -24,7 +24,7 @@ DELETE FROM PortfolioProject..netflix_userbase
 WHERE Join_Date > '2023-12-31'; -- remove dates after December 31, 2023
 
 DELETE FROM PortfolioProject..netflix_userbase
-WHERE Join_Date < '2013-01-01'; -- remove dates after December 31, 2023
+WHERE Join_Date < '2013-01-01'; -- remove dates befor January 01, 2013
 
 select min(Last_Payment_Date), max(Last_Payment_Date)
 FROM PortfolioProject..netflix_userbase
@@ -33,7 +33,7 @@ DELETE FROM PortfolioProject..netflix_userbase
 WHERE Last_Payment_Date > '2023-12-31'; -- remove dates after December 31, 2023
 
 DELETE FROM PortfolioProject..netflix_userbase
-WHERE Last_Payment_Date < '2013-01-01'; -- remove dates after December 31, 2023
+WHERE Last_Payment_Date < '2013-01-01'; -- remove dates before January 01, 2013
 
 
 -- Checking for incosistent date where Join date is greater than last payment date
